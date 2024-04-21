@@ -1,0 +1,90 @@
+<div class="container">
+    <h2>Resort Information</h2>
+    <form (ngSubmit)="submitForm()" #resortForm="ngForm">
+      <div class="form-group">
+        <label for="resortName">Resort Name:</label>
+        <input type="text" class="form-control" id="resortName" name="resortName" [(ngModel)]="resortName" required>
+      </div>
+      <div class="form-group">
+        <label for="slug">Slug:</label>
+        <input type="text" class="form-control" id="slug" name="slug" [(ngModel)]="slug">
+      </div>
+      <div class="form-group">
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" class="form-control" id="contactNumber" name="contactNumber" [(ngModel)]="contactNumber">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <label for="Address">Address</label>
+          <div class="address-fields">
+            <div class="address-field full-width">
+              <input type="text" id="addressLine1" name="addressLine1" class="form-control" [(ngModel)]="addressLine1" required>
+              <label for="addressLine1">Address Line 1</label>
+            </div>
+            <div class="address-field full-width">
+              <input type="text" id="addressLine2" name="addressLine2" class="form-control" [(ngModel)]="addressLine2">
+              <label for="addressLine2">Address Line 2</label>
+            </div>
+            <div class="address-field">
+              <input type="text" id="city" name="city" class="form-control" [(ngModel)]="city" required>
+              <label for="city">City/District</label>
+            </div>
+            <div class="address-field">
+              <input type="text" id="state" name="state" class="form-control" [(ngModel)]="state" required>
+              <label for="state">State/Province</label>
+            </div>
+            <div class="address-field">
+              <input type="text" id="postalCode" name="postalCode" class="form-control" [(ngModel)]="postalCode" required>
+              <label for="postalCode">Postal Code</label>
+            </div>
+            <div class="address-field">
+              <select id="country" name="country" class="form-control" [(ngModel)]="country" required>
+                <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+              </select>
+              <label for="country">Country</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+  
+      <div class="form-group">
+        <label for="logo">Logo:</label>
+        <input type="file" class="form-control-file" id="logo" name="logo" (change)="onLogoChange($event)">
+      </div>
+      <div class="form-group">
+        <label for="website">Website:</label>
+        <input type="text" class="form-control" id="website" name="website" [(ngModel)]="website">
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="termsAndConditions">Terms and Conditions For Invoice:</label>
+        <angular-editor [placeholder]="'Enter text here...'" class="custom-editor"></angular-editor>
+      </div>
+       -->
+      
+
+
+      
+      <div class="form-group">
+        <label for="upiId">UPI ID:</label>
+        <input type="text" class="form-control" id="upiId" name="upiId" [(ngModel)]="upiId">
+      </div>
+      <div class="form-group">
+        <label for="qrFile">QR File:</label>
+        <input type="file" class="form-control-file" id="qrFile" name="qrFile" (change)="onQRFileChange($event)">
+      </div>
+      <!-- <div class="form-group">
+        <label for="foodDetails">Food Details:</label>
+        <angular-editor [placeholder]="'Enter text here...'" class="custom-editor"></angular-editor>
+      </div> -->
+      
+      <!-- Add more form fields for other information -->
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+    </form>
+</div>

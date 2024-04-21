@@ -1,0 +1,120 @@
+<!-- reservation.component.html -->
+
+<div class="reservation-form">
+    <!-- Room Details -->
+    <h2>Room Details</h2>
+    <div class="form-group">
+        <label for="selectResort">Select Resort: <span class="yrr">*</span></label>
+        <select id="selectResort" name="selectResort" [(ngModel)]="reservation.resort" required>
+            <!-- Options for selecting resort -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="selectCottageType">Select Cottage Type: <span class="yrr">*</span></label>
+        <select id="selectCottageType" name="selectCottageType" [(ngModel)]="reservation.cottageType" required>
+            <!-- Options for selecting cottage type -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="chooseRooms">Choose Rooms: <span class="yrr">*</span></label>
+        <input type="number" id="chooseRooms" name="chooseRooms" [(ngModel)]="reservation.rooms" placeholder="Enter number of rooms" required>
+    </div>
+<br><hr><br>
+    <!-- Booking Details -->
+    <h2>Booking Details</h2>
+    <div class="form-group">
+        <label for="checkInDate">Check In Date: <span class="yrr">*</span></label>
+        <input type="date" id="checkInDate" name="checkInDate" [(ngModel)]="reservation.checkInDate" placeholder="Select check-in date" required>
+    </div>
+    <div class="form-group">
+        <label for="checkOutDate">Check Out Date: <span class="yrr">*</span></label>
+        <input type="date" id="checkOutDate" name="checkOutDate" [(ngModel)]="reservation.checkOutDate" placeholder="Select check-out date" required>
+    </div>
+    <div class="form-group">
+        <label for="numberOfGuest">Number of Guests: <span class="yrr">*</span></label>
+        <input type="number" id="numberOfGuest" name="numberOfGuest" [(ngModel)]="reservation.numberOfGuests" placeholder="Enter number of guests" required>
+    </div>
+    <div class="form-group">
+        <label for="extraGuest">Extra Guest:</label>
+        <input type="number" id="extraGuest" name="extraGuest" [(ngModel)]="reservation.extraGuest" placeholder="Enter number of extra guests">
+    </div>
+    <div class="form-group">
+        <label for="paymentStatus">Payment Status: <span class="yrr">*</span></label>
+        <select id="paymentStatus" name="paymentStatus" [(ngModel)]="reservation.paymentStatus" required>
+            <option value="paid">Paid</option>
+            <option value="not paid">Not Paid</option>
+        </select>
+    </div>
+<br><hr><br>
+    <!-- User Details -->
+    <h2>User Details</h2>
+    <div class="form-group">
+        <label for="addExistingGuest">Add Existing Guest:</label>
+        <select id="addExistingGuest" name="addExistingGuest" [(ngModel)]="reservation.existingGuest">
+            <!-- Options for selecting existing guests -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="fullName">Full Name: <span class="yrr">*</span></label>
+        <input type="text" id="fullName" name="fullName" [(ngModel)]="reservation.fullName" placeholder="Enter your full name" required>
+    </div>
+    <div class="form-group">
+        <label for="phoneNumber">Phone Number: <span class="yrr">*</span></label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" [(ngModel)]="reservation.phoneNumber" placeholder="Enter your phone number" required>
+    </div>
+    <div class="form-group">
+        <label for="alternatePhoneNumber">Alternate Phone Number:</label>
+        <input type="tel" id="alternatePhoneNumber" name="alternatePhoneNumber" [(ngModel)]="reservation.alternatePhoneNumber" placeholder="Enter alternate phone number">
+    </div>
+    <div class="form-group">
+        <label for="email">Email: <span class="yrr">*</span></label>
+        <input type="email" id="email" name="email" [(ngModel)]="reservation.email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+        <fieldset>
+            <label for="address">Address:</label>
+            <div class="address-fields">
+                <div class="address-field full-width">
+                    <input type="text" id="addressLine1" name="addressLine1" class="form-control" ngModel required placeholder="Enter address line 1">
+                    <label for="addressLine1">Address Line 1 <span class="yrr">*</span></label>
+                </div>
+                <div class="address-field full-width">
+                    <input type="text" id="addressLine2" name="addressLine2" class="form-control" ngModel placeholder="Enter address line 2">
+                    <label for="addressLine2">Address Line 2</label>
+                </div>
+                <div class="address-field">
+                    <input type="text" id="city" name="city" class="form-control" ngModel required placeholder="Enter city/district">
+                    <label for="city">City/District <span class="yrr">*</span></label>
+                </div>
+                <div class="address-field">
+                    <input type="text" id="state" name="state" class="form-control" ngModel required placeholder="Enter state/province">
+                    <label for="state">State/Province <span class="yrr">*</span></label>
+                </div>
+                <div class="address-field">
+                    <input type="text" id="postalCode" name="postalCode" class="form-control" ngModel required placeholder="Enter postal code">
+                    <label for="postalCode">Postal Code <span class="yrr">*</span></label>
+                </div>
+                <div class="address-field">
+                    <select id="country" name="country" class="form-control" ngModel required>
+                        <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+                    </select>
+                    <label for="country">Country <span class="yrr">*</span></label>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <hr>
+
+    <!-- Booking Details -->
+    <h2>Booking Details</h2>
+    <div>
+        <!-- Show booking details here -->
+    </div>
+    <br><hr><br>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button type="submit" class="bt1" [disabled]="form.invalid">Submit</button>
+        <button type="reset" class="bt2">Reset</button>
+    </div>
+</div>

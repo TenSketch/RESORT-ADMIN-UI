@@ -15,6 +15,9 @@ import { LoginComponent } from './auth/prelogin/login/login.component';
 import { DashboardComponent } from './modules/postlogin/dashboard/dashboard.component';
 import { AddGuestComponent } from './add-guest/add-guest.component';
 import { ShowguestComponent } from './showguest/showguest.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { ResortsComponent } from './resorts/resorts.component';
+import { RoomComponent } from './room/room.component';
 
 
 @NgModule({
@@ -26,6 +29,9 @@ import { ShowguestComponent } from './showguest/showguest.component';
     PreloginLayoutComponent,
     AddGuestComponent,
     ShowguestComponent,
+    ReservationComponent,
+    ResortsComponent,
+    RoomComponent,
 
   ],
   imports: [

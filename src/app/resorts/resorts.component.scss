@@ -1,0 +1,225 @@
+
+@use '/src/scss/base/' as *;
+$span2: span 2;
+.dashboard__card-top {
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    // top: 0;
+    padding: 1.5rem 2rem;
+    // background: url(/assets/images/dashboard-top-card-bg.png) no-repeat 100%/cover;
+    // color: #fff;
+    &--title {
+        font-weight: 600;
+        // font-size: 2.25rem;
+    }
+    &--subtitle {
+        border: 1px dashed hsla($hue-dark, $saturation-dark, $lightness-dark, 10%);
+        width: fit-content;
+        p {
+            color: $clr-dark-primary--200;
+        }
+        // @media(min-width:768px) {
+        //     columns: 3;
+        // }
+    }
+    img {
+        right: 17%;
+        top: 23%;
+    }
+}
+.dashboard__wrapper {
+    padding-inline: 2rem;
+    gap: 2rem;
+    &.d-md-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+}
+article {
+    grid-column: $span2;
+    cursor: pointer;
+    transition: box-shadow 300ms ease;
+    &.dashboard__card {
+        background: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 0 3px 0 rgb(31 38 135 / 30%);
+        // backdrop-filter: blur(2px);
+        // -webkit-backdrop-filter: blur(2px);
+        @include border-radius;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        &:nth-child(6) {
+            grid-column: span 6;
+            gap: 1rem;
+            @media(min-width:991px) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 7rem;
+            }
+        }
+        @media(max-width: 768px) {
+            &+.dashboard__card {
+                margin-top: 1.5em;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 0 0 3px 1.5px hsla($hue-dark, $saturation-dark, $lightness-dark, 24%);
+    }
+}
+.content_title {
+    // margin-bottom: 0;
+}
+.content_count {
+    font-size: 4rem !important;
+    font-weight: 700;
+}
+.chart {
+    grid-column: $span2;
+    grid-row: $span2;
+}
+
+
+.container {
+    max-width: 700px; /* Adjust container width as needed */
+    margin: 0 auto;
+  }
+  
+  .form-container {
+    background-color: hwb(146 96% 1%);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+ 
+//   .file-input-container {
+//     display: flex;
+//     align-items: center; /* Align items vertically */
+//   }
+  
+//   .file-label {
+//     margin-left: 10px; /* Adjust spacing between file input and label */
+//   }
+  
+  
+  .form-group {
+    display: flex; /* Use flexbox for row-wise alignment */
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    width: 200px; /* Fixed width for labels */
+  }
+  
+
+  
+  .form-group input[type="text"],
+  .form-group input[type="tel"],
+  .form-group input[type="email"],
+  .form-group input[type="date"],
+  .form-group select,
+  .form-group textarea {
+    flex: 11; /* Fill remaining space */
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #e3d9d9;
+    border-radius: 14px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    margin-left: 10px;
+  }
+  
+.address-fields {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 200px;
+    margin-top: -30px;
+
+  }
+  
+  .address-field {
+    flex: 0 0 50%; /* Each address field takes half of the container width by default */
+    padding-right: 10px; /* Adjust spacing between address fields */
+    margin-bottom: 10px;
+
+  }
+  
+  .address-field label {
+    display: block;
+    
+  }
+  
+  .address-field input,
+  .address-field select {
+    flex: 1; /* Take up remaining space */
+    height: 40px; /* Set height */
+    padding: 8px; /* Adjust padding */
+    font-size: 16px; /* Adjust font size */
+    border: 1px solid #d2c6c6;
+    border-radius: 4px;
+  }
+  
+  .address-field.full-width {
+    flex-basis: 100%; /* Set full width for Address Line 1 and Address Line 2 */
+  }
+  
+  .address-field:last-child {
+    padding-right: 0; /* Remove right padding for the last address field */
+  }
+  
+  /* Responsive Styling */
+  @media only screen and (max-width: 768px) {
+    .form-group {
+      flex-direction: column; /* Stack inputs and labels vertically on smaller screens */
+    }
+  
+    .form-group label {
+      width: 100%; /* Full width for labels on smaller screens */
+      margin-bottom: 5px;
+    }
+  
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; /* Full width for inputs on smaller screens */
+      margin-bottom: 10px;
+    }
+  }
+  
+  .custom-editor {
+    flex: 1;
+    
+  }
+  
+  .angular-editor-wrapper {
+   height: 200px;
+   width: 100%;
+   
+}
+
+// Responsive adjustments for editor
+@media (max-width: 768px) {
+    .custom-editor .angular-editor-wrapper {
+        height: 300px; // Adjust height for smaller screens if necessary
+    }
+}
+

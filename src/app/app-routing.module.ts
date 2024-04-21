@@ -3,12 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './modules/postlogin/dashboard/dashboard.component';
 import { LoginComponent } from './auth/prelogin/login/login.component';
 import { AddGuestComponent } from './add-guest/add-guest.component';
+import { RoomComponent } from './room/room.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { ResortsComponent } from './resorts/resorts.component';
 
 
 const routes: Routes = [
 {path:'dashboard', component:DashboardComponent}, 
 {path:'login',component:LoginComponent},
 {path:'addguest',component:AddGuestComponent},
+{path:'addroom',component:RoomComponent},
+{path:'addreservation',component:ReservationComponent},
+{path:'addresorts',component:ResortsComponent},
+
 
  {path:'',redirectTo:'login',pathMatch:'full'}
 ];

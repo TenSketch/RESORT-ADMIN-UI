@@ -1,0 +1,202 @@
+/* reservation.component.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e7dccd;
+  }
+  
+
+  .yrr{
+    color: red;
+    margin-left: 3px;
+}
+
+
+  .reservation-form {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 250px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  input[type="date"] {
+    width: calc(85% - 180px);
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  select:focus,
+  input[type="date"]:focus {
+    border-color: #007bff;
+  }
+  
+  .buttons {
+    text-align: center;
+    margin-top: 20px;
+    margin: 40px;
+    padding: 40px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .address-fields {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 250px;
+    margin-top: -20px;
+  }
+  
+  .address-field {
+    flex: 0 0 50%;
+    padding-right: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .address-field label {
+    display: block;
+  }
+  
+  .address-field input,
+  .address-field select {
+    width: calc(100% - 37px);
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .address-field input:focus,
+  .address-field select:focus {
+    border-color: #007bff;
+  }
+  
+  .address-field.full-width {
+    flex-basis: 100%;
+  }
+  
+  .address-field:last-child {
+    padding-right: 10;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .reservation-form {
+      padding: 10px;
+    }
+  
+    label {
+      width: 100%;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    input[type="date"] {
+      width: 100%;
+    }
+  
+    .address-fields {
+      margin-left: 4px;
+      margin-top: -10px;
+    }
+  
+    .address-field {
+      flex: 0 0 100%;
+      padding-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .buttons{
+    margin:10px
+  }
+  .bt1, .bt2 {
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 75px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px; /* Add margin to create space between buttons */
+    margin-bottom: 10px;
+}
+
+.bt1 {
+    background-color: #4CAF50; /* Background color for submit button */
+    width: 30%;
+}
+
+.bt2 {
+    background-color: #f44336; /* Background color for reset button */
+    width: 30%;
+
+}
+
+/* Hover effect */
+.bt1:hover, .bt2:hover {
+    opacity: 0.8; /* Reduce opacity on hover for both buttons */
+}
+
+.bt1:hover {
+    background-color: #45a049; /* Change background color of submit button on hover */
+}
+
+.bt2:hover {
+    background-color: #e57373; /* Change background color of reset button on hover */
+}
+
+/* Responsive layout */
+@media only screen and (max-width: 600px) {
+    .bt1, .bt2 {
+        width: 100%; /* Set width to 100% on smaller screens */
+        margin: 10px 0; /* Adjust margin for better spacing */
+    }
+}
+

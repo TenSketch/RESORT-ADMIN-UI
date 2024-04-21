@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e7dccd;
+}
+
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.required {
+    color: red;
+    margin-left: 3px;
+}
+
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#roomImage{
+    width: 50%;
+}
+@media only screen and (max-width: 600px) {
+    #roomImage {
+        width: 100%; /* Set the width to 100% on smaller screens */
+    }
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c45c5c;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsive layout */
+@media only screen and (min-width: 600px) {
+    .form-group {
+        display: flex;
+        align-items: center;
+    }
+
+    label {
+        width: 40%;
+        margin-right: 10%;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 50%;
+    }
+
+    input[type="submit"] {
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+.container {
+    width: 50%;
+    margin: auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .error {
+    border: 1px solid red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+ /* Button styles */
+/* Button styles */
+/* Button styles */
+/* Button styles */
+.bt1, .bt2 {
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 75px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px; /* Add margin to create space between buttons */
+    margin-bottom: 10px;
+}
+
+.bt1 {
+    background-color: #4CAF50; /* Background color for submit button */
+    width: 30%;
+}
+
+.bt2 {
+    background-color: #f44336; /* Background color for reset button */
+    width: 30%;
+
+}
+
+/* Hover effect */
+.bt1:hover, .bt2:hover {
+    opacity: 0.8; /* Reduce opacity on hover for both buttons */
+}
+
+.bt1:hover {
+    background-color: #45a049; /* Change background color of submit button on hover */
+}
+
+.bt2:hover {
+    background-color: #e57373; /* Change background color of reset button on hover */
+}
+
+/* Responsive layout */
+@media only screen and (max-width: 600px) {
+    .bt1, .bt2 {
+        width: 100%; /* Set width to 100% on smaller screens */
+        margin: 10px 0; /* Adjust margin for better spacing */
+    }
+}
+

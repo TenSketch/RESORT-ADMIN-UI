@@ -38,6 +38,7 @@ export class MainLayoutComponent implements OnInit {
   }
   goToAddResort(){
     console.log("add resort page")
+    this.router.navigate(["./addresorts"])
   }
 
   goToViewCottages() {
@@ -57,6 +58,7 @@ export class MainLayoutComponent implements OnInit {
 
   goToAddRoom() {
     console.log("Add room page");
+    this.router.navigate(["./addroom"])
     // Add your logic to navigate to the add room page
   }
 
@@ -75,6 +77,7 @@ this.router.navigate(["./addguest"])
 // 
   goToAddReservation() {
     console.log("Add reservation page");
+    this.router.navigate(["./addreservation"])
     // Add your logic to navigate to the add reservation page
 
   }

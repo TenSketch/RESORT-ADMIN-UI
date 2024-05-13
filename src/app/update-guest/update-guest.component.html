@@ -1,0 +1,72 @@
+<section class="container">
+    <h1 class="heading">Update Guest</h1>
+    <form (ngSubmit)="submitForm()" [formGroup]="addguestform" class="form-container">
+      <div class="form-group">
+        <label for="fullName">Full Name: </label>
+        <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter your name" formControlName="fullname">
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone: </label>
+        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter 10-digit phone number" formControlName="phone">
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Enter email" formControlName="email">
+      </div>
+  
+      <div class="form-group">
+        <div class="file-input-container">
+          <label for="profileImage" class="file-label">Profile Image</label>
+          <input type="file" id="profileImage" name="profileImage" class="form-control-file" accept="image/*" formControlName="profileImage" (change)="onImageSelected($event)">
+        </div>
+      </div>
+  
+    
+  
+      <div class="form-group">
+        <label for="nationality">Nationality: </label>
+        <input type="text" id="nationality" name="nationality" class="form-control" formControlName="nationality" required>
+      </div>
+  
+      <div class="form-group">
+        <fieldset>
+          <label for="Address">Address</label>
+          <div class="address-fields">
+            <div class="address-field full-width">
+              <input type="text" id="addressLine1" name="addressLine1" class="form-control" formControlName="addressLine1">
+              <label for="addressLine1">Address Line 1: </label>
+            </div>
+            <div class="address-field full-width">
+              <input type="text" id="addressLine2" name="addressLine2" class="form-control" formControlName="addressLine2">
+              <label for="addressLine2">Address Line 2</label>
+            </div>
+            <div class="address-field">
+              <input type="text" id="city" name="city" class="form-control" formControlName="city">
+              <label for="city">City/District: </label>
+            </div>
+            <div class="address-field">
+              <input type="text" id="state" name="state" class="form-control" formControlName="state">
+              <label for="state">State/Province: </label>
+            </div>
+            <div class="address-field">
+              <input type="text" id="postalCode" name="postalCode" class="form-control" formControlName="postalCode">
+              <label for="postalCode">Postal Code</label>
+            </div>
+            <div class="address-field">
+              <select id="country" name="country" class="form-control" formControlName="country">
+                <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+              </select>
+              <label for="country">Country: </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" class="bt1">Update</button>
+      </div>
+    </form>
+  </section>
+  

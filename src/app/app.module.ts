@@ -18,6 +18,8 @@ import { ShowguestComponent } from './showguest/showguest.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ResortsComponent } from './resorts/resorts.component';
 import { RoomComponent } from './room/room.component';
+import { UpdateGuestComponent } from './update-guest/update-guest.component';
+import { ViewguestComponent } from './viewguest/viewguest.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { RoomComponent } from './room/room.component';
     ReservationComponent,
     ResortsComponent,
     RoomComponent,
+    UpdateGuestComponent,
+    ViewguestComponent,
 
   ],
   imports: [

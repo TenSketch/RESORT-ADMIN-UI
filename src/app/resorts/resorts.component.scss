@@ -120,12 +120,13 @@ article {
   .form-group input[type="tel"],
   .form-group input[type="email"],
   .form-group input[type="date"],
+  .form-group input[type="file"],
   .form-group select,
   .form-group textarea {
     flex: 11; /* Fill remaining space */
     padding: 10px;
     font-size: 18px;
-    border: 1px solid #e3d9d9;
+    border: 1px solid #e98484;
     border-radius: 14px;
   }
   
@@ -221,5 +222,51 @@ article {
     .custom-editor .angular-editor-wrapper {
         height: 300px; // Adjust height for smaller screens if necessary
     }
+}
+
+
+.bt1, .bt2 {
+  padding: 12px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 75px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px; /* Add margin to create space between buttons */
+  margin-bottom: 10px;
+}
+
+.bt1 {
+  background-color: #4CAF50; /* Background color for submit button */
+  width: 30%;
+}
+
+.bt2 {
+  background-color: #f44336; /* Background color for reset button */
+  width: 30%;
+
+}
+
+/* Hover effect */
+.bt1:hover, .bt2:hover {
+  opacity: 0.8; /* Reduce opacity on hover for both buttons */
+}
+
+.bt1:hover {
+  background-color: #45a049; /* Change background color of submit button on hover */
+}
+
+.bt2:hover {
+  background-color: #e57373; /* Change background color of reset button on hover */
+}
+
+/* Responsive layout */
+@media only screen and (max-width: 600px) {
+  .bt1, .bt2 {
+      width: 100%; /* Set width to 100% on smaller screens */
+      margin: 10px 0; /* Adjust margin for better spacing */
+  }
 }
 

@@ -6,12 +6,12 @@
   </h1>
   <form (ngSubmit)="submitForm()" [formGroup]="addguestform" class="form-container">
     <div class="form-group">
-      <label for="fullName">Full Name</label>
+      <label for="fullName">Full Name:<span class="required">*</span></label>
       <input type="text" id="fullName" name="fullName" class="form-control" formControlName="fullname">
       <div class="form-text text-danger" *ngIf="FullName.errors?.['required']&&(FullName.touched||FullName.dirty)">Name
         is Required.</div>
       <div class="form-text text-danger" *ngIf="FullName.errors?.['minlength']&&(FullName.touched||FullName.dirty)">
-         Name is too short  </div>
+        Name is too short </div>
       <div class="form-text text-danger" *ngIf="FullName.errors?.['pattern']&&(FullName.dirty||FullName.touched)"> Name
         Should Start with Alphabat</div>
     </div>
@@ -20,13 +20,17 @@
 
 
     <div class="form-group">
-      <label for="phone">Phone</label>
+      <label for="phone">Phone:<span class="required">*</span></label>
       <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter 10-digit phone number"
         formControlName="phone">
-        <div class="form-text text-danger" *ngIf="Phone.errors?.['required']&&(Phone.dirty||Phone.touched)"> Phone numberis Required</div>
-        <div class="form-text text-danger" *ngIf="Phone.errors?.['pattern']&&(Phone.dirty||Phone.touched)"> Number Only</div>
-        <div class="form-text text-danger" *ngIf="Phone.errors?.['minlength']&&(Phone.dirty||Phone.touched)"> Number should be 10-digits</div>
-        <div class="form-text text-danger" *ngIf="Phone.errors?.['maxlength']&&(Phone.dirty||Phone.touched)"> Number Should be 10-digits</div>
+      <div class="form-text text-danger" *ngIf="Phone.errors?.['required']&&(Phone.dirty||Phone.touched)"> Phone
+        numberis Required</div>
+      <div class="form-text text-danger" *ngIf="Phone.errors?.['pattern']&&(Phone.dirty||Phone.touched)"> Number Only
+      </div>
+      <div class="form-text text-danger" *ngIf="Phone.errors?.['minlength']&&(Phone.dirty||Phone.touched)"> Number
+        should be 10-digits</div>
+      <div class="form-text text-danger" *ngIf="Phone.errors?.['maxlength']&&(Phone.dirty||Phone.touched)"> Number
+        Should be 10-digits</div>
     </div>
 
 
@@ -35,11 +39,13 @@
 
     <!-- Mail -->
     <div class="form-group">
-      <label for="email">Email</label>
+      <label for="email">Email:<span class="required">*</span></label>
       <input type="email" id="email" name="email" class="form-control" placeholder="Enter email"
         formControlName="email">
-        <div class="form-text text-danger" *ngIf="Email.errors?.['required']&&(Email.dirty||Email.touched)"> Email is Required</div>
-        <div class="form-text text-danger" *ngIf="Email.errors?.['email']&&(Email.dirty||Email.touched)"> Email is Invalid</div>
+      <div class="form-text text-danger" *ngIf="Email.errors?.['required']&&(Email.dirty||Email.touched)"> Email is
+        Required</div>
+      <div class="form-text text-danger" *ngIf="Email.errors?.['email']&&(Email.dirty||Email.touched)"> Email is Invalid
+      </div>
     </div>
 
 
@@ -59,56 +65,54 @@
         <label for="profileImage" class="file-label">Profile Image</label>
 
         <input type="file" id="profileImage" name="profileImage" class="form-control-file" accept="image/*"
-          (change)="onImageSelected($event)">
+          formControlName="profileImage" (change)="onImageSelected($event)">
       </div>
     </div>
 
 
 
-
     <div class="form-group">
-      <label for="dob">Date of Birth</label>
-      <input type="date" id="dob" name="dob" class="form-control" ngModel required>
+      <label for="dob">Date of Birth:<span class="required">*</span></label>
+      <input type="date" id="dob" name="dob" class="form-control" formControlName="dob" required>
     </div>
-
+    
     <div class="form-group">
-      <label for="nationality">Nationality</label>
-      <input type="text" id="nationality" name="nationality" class="form-control" ngModel required>
+      <label for="nationality">Nationality:<span class="required">*</span></label>
+      <input type="text" id="nationality" name="nationality" class="form-control" formControlName="nationality" required>
     </div>
+    
 
 
 
     <div class="form-group">
       <fieldset>
-        <!-- <legend>Address</legend> -->
         <label for="Address">Address</label>
         <div class="address-fields">
-          <div class="address-field full-width"> <!-- Set full width for Address Line 1 -->
-            <input type="text" id="addressLine1" name="addressLine1" class="form-control" ngModel required>
-            <label for="addressLine1">Address Line 1</label>
+          <div class="address-field full-width">
+            <input type="text" id="addressLine1" name="addressLine1" class="form-control" formControlName="addressLine1">
+            <label for="addressLine1">Address Line 1:<span class="required">*</span></label>
           </div>
-          <div class="address-field full-width"> <!-- Set full width for Address Line 2 -->
-            <input type="text" id="addressLine2" name="addressLine2" class="form-control" ngModel>
+          <div class="address-field full-width">
+            <input type="text" id="addressLine2" name="addressLine2" class="form-control" formControlName="addressLine2">
             <label for="addressLine2">Address Line 2</label>
           </div>
           <div class="address-field">
-            <input type="text" id="city" name="city" class="form-control" ngModel required>
-            <label for="city">City/District</label>
+            <input type="text" id="city" name="city" class="form-control" formControlName="city">
+            <label for="city">City/District:<span class="required">*</span></label>
           </div>
           <div class="address-field">
-            <input type="text" id="state" name="state" class="form-control" ngModel required>
-            <label for="state">State/Province</label>
+            <input type="text" id="state" name="state" class="form-control" formControlName="state">
+            <label for="state">State/Province:<span class="required">*</span></label>
           </div>
           <div class="address-field">
-            <input type="text" id="postalCode" name="postalCode" class="form-control" ngModel required>
+            <input type="text" id="postalCode" name="postalCode" class="form-control" formControlName="postalCode">
             <label for="postalCode">Postal Code</label>
           </div>
           <div class="address-field">
-
-            <select id="country" name="country" class="form-control" ngModel required>
+            <select id="country" name="country" class="form-control" formControlName="country">
               <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
             </select>
-            <label for="country">Country</label>
+            <label for="country">Country:<span class="required">*</span></label>
           </div>
         </div>
       </fieldset>
@@ -123,25 +127,24 @@
 
 
 
-
     <div class="form-group">
-      <label for="registrationDate">Registration Date</label>
+      <label for="registrationDate">Registration Date:<span class="required">*</span></label>
       <input type="date" id="registrationDate" name="registrationDate" class="form-control"
         formControlName="registrationDate">
-        
 
-        
-        
+
+
+
 
     </div>
     <div class="form-group">
       <label for="accountStatus">Account Status</label>
       <select id="accountStatus" name="accountStatus" class="form-control" formControlName="accountStatus">
-        
+
         <option value="active">Active</option>
         <option value="inactive">Inactive</option>
       </select>
-      <div class="form-text text-danger" *ngIf="AccountStatus.errors?.['required']&&(AccountStatus.touched)">Status 
+      <div class="form-text text-danger" *ngIf="AccountStatus.errors?.['required']&&(AccountStatus.touched)">Status
         is Required.</div>
 
     </div>
@@ -149,29 +152,33 @@
       <label for="emailVerification">Email Verification</label>
       <input type="text" id="emailVerification" name="emailVerification" class="form-control"
         formControlName="emailVerification">
-        <div class="form-text text-danger" *ngIf="EmailVarification.errors?.['required']&&(EmailVarification.touched||EmailVarification.dirty)">EmailVarification
-          is Required.</div>
-       
+      <div class="form-text text-danger"
+        *ngIf="EmailVerification.errors?.['required']&&(EmailVerification.touched||EmailVerification.dirty)">
+        EmailVarification
+        is Required.</div>
+
     </div>
     <div class="form-group">
       <label for="emailVerificationToken">Email Verification Token</label>
       <input type="text" id="emailVerificationToken" name="emailVerificationToken" class="form-control"
         formControlName="emailVerificationToken">
-        <div class="form-text text-danger" *ngIf="EmailVerificationToken.errors?.['required']&&(EmailVerificationToken.touched||EmailVerificationToken.dirty)">Status 
-          is Required.</div>
+      <div class="form-text text-danger"
+        *ngIf="EmailVerificationToken.errors?.['required']&&(EmailVerificationToken.touched||EmailVerificationToken.dirty)">
+        Status
+        is Required.</div>
 
     </div>
     <div class="form-group">
       <label for="accessToken">Access Token</label>
       <input type="text" id="accessToken" name="accessToken" class="form-control" formControlName="accessToken">
-      <div class="form-text text-danger" *ngIf="AccessToken.errors?.['required']&&(AccessToken.touched)">Status 
+      <div class="form-text text-danger" *ngIf="AccessToken.errors?.['required']&&(AccessToken.touched)">Status
         is Required.</div>
 
-     
+
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Add</button>
-      <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+      <button type="submit" class="bt1">Add</button>
+      <button type="reset" class="bt2" (click)="resetForm()">Reset</button>
     </div>
   </form>
 </section>

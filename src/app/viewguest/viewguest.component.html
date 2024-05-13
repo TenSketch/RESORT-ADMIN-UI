@@ -1,0 +1,55 @@
+<!-- guest-details.component.html -->
+<section class="container">
+    <h1 class="heading">Guest Details</h1>
+    <div class="details-container">
+      <div class="detail">
+        <label>ID:</label>
+        <span>{{ guest.id }}</span>
+      </div>
+      <div class="detail">
+        <label>Full Name:</label>
+        <span>{{ guest.fullname }}</span>
+      </div>
+      <div class="detail">
+        <label>Phone:</label>
+        <span>{{ guest.phone }}</span>
+      </div>
+      <div class="detail">
+        <label>Email:</label>
+        <span>{{ guest.email }}</span>
+      </div>
+      <div class="detail">
+        <label>Profile Image:</label>
+        <img [src]="guest.profileImage" alt="Profile Image">
+      </div>
+      <div class="detail">
+        <label>Nationality:</label>
+        <span>{{ guest.nationality }}</span>
+      </div>
+      <div class="detail">
+        <label>Address Line 1:</label>
+        <span>{{ guest.addressLine1 }}</span>
+      </div>
+      <div class="detail">
+        <label>Address Line 2:</label>
+        <span>{{ guest.addressLine2 }}</span>
+      </div>
+      <div class="detail">
+        <label>City:</label>
+        <span>{{ guest.city }}</span>
+      </div>
+      <div class="detail">
+        <label>State:</label>
+        <span>{{ guest.state }}</span>
+      </div>
+      <div class="detail">
+        <label>Postal Code:</label>
+        <span>{{ guest.postalCode }}</span>
+      </div>
+      <div class="detail">
+        <label>Country:</label>
+        <span>{{ guest.country }}</span>
+      </div>
+    </div>
+  </section>
+  

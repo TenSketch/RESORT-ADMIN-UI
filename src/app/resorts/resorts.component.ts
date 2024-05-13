@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-resorts',
@@ -6,60 +7,77 @@ import { Component } from '@angular/core';
   styleUrls: ['./resorts.component.scss']
 })
 export class ResortsComponent {
-[x: string]: any;
   resortName: string;
   slug: string;
   contactNumber: string;
   email: string;
-  address: string;
+  addressLine1: string;
+  addressLine2: string;
+  city: string;
+  state: string;
+  postalCode: string;
+  country: string;
+  imagelogo: File;
   website: string;
-  termsAndConditions: string;
   upiId: string;
-  logo: File = new File([], ''); // Initialize to empty File object
-  qrFile: File = new File([], ''); // Initialize to empty File object
+  qrFile: File;
   foodDetails: string;
 countries: any;
-postalCode: any;
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
 
   submitForm() {
-    // You can handle form submission logic here
-    console.log('Form submitted!');
-    console.log('Resort Name:', this.resortName);
-    console.log('Slug:', this.slug);
-    console.log('Contact Number:', this.contactNumber);
-    console.log('Email:', this.email);
-    console.log('Address:', this.address);
-    console.log('Website:', this.website);
-    console.log('Terms and Conditions:', this.termsAndConditions);
-    console.log('UPI ID:', this.upiId);
-    console.log('Logo:', this.logo);
-    console.log('QR File:', this.qrFile);
-    console.log('Food Details:', this.foodDetails);
-    
-    // Reset the form after submission
-    this.resetForm();
+    const formData = new FormData();
+    formData.append('resortName', this.resortName);
+    formData.append('slug', this.slug);
+    formData.append('contactNumber', this.contactNumber);
+    formData.append('email', this.email);
+    formData.append('addressLine1', this.addressLine1);
+    formData.append('addressLine2', this.addressLine2);
+    formData.append('city', this.city);
+    formData.append('state', this.state);
+    formData.append('postalCode', this.postalCode);
+    formData.append('country', this.country);
+    formData.append('imagelogo', this.imagelogo);
+    formData.append('website', this.website);
+    formData.append('upiId', this.upiId);
+    formData.append('qrFile', this.qrFile);
+    formData.append('foodDetails', this.foodDetails);
+
+    this.http.post<any>('http://localhost:8080/api/resort1', formData).subscribe(
+      response => {
+        console.log('Resort created successfully:', response);
+        // Optionally, reset the form here
+        this.resetForm();
+      },
+      error => {
+        console.error('Error creating resort:', error);
+      }
+    );
   }
 
   resetForm() {
-    // Reset all form fields to their initial state
+    // Reset all form fields
     this.resortName = '';
     this.slug = '';
     this.contactNumber = '';
     this.email = '';
-    this.address = '';
+    this.addressLine1 = '';
+    this.addressLine2 = '';
+    this.city = '';
+    this.state = '';
+    this.postalCode = '';
+    this.country = '';
+   // this.logo = null;
     this.website = '';
-    this.termsAndConditions = '';
     this.upiId = '';
-    this.logo = new File([], ''); // Reset to empty File object
-    this.qrFile = new File([], ''); // Reset to empty File object
+   // this.qrFile = null;
     this.foodDetails = '';
   }
 
   onLogoChange(event: any) {
     // Handle logo file change event
-    this.logo = event.target.files[0];
+    this.imagelogo = event.target.files[0];
   }
 
   onQRFileChange(event: any) {

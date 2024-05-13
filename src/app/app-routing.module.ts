@@ -6,12 +6,18 @@ import { AddGuestComponent } from './add-guest/add-guest.component';
 import { RoomComponent } from './room/room.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ResortsComponent } from './resorts/resorts.component';
+import { ShowguestComponent } from './showguest/showguest.component';
+import { UpdateGuestComponent } from './update-guest/update-guest.component';
+import { ViewguestComponent } from './viewguest/viewguest.component';
 
 
 const routes: Routes = [
 {path:'dashboard', component:DashboardComponent}, 
 {path:'login',component:LoginComponent},
 {path:'addguest',component:AddGuestComponent},
+{path:'viewguest',component:ShowguestComponent},
+{path:'viewguestdetails/:id',component:ViewguestComponent},
+{path:'updateguest/:id',component:UpdateGuestComponent},
 {path:'addroom',component:RoomComponent},
 {path:'addreservation',component:ReservationComponent},
 {path:'addresorts',component:ResortsComponent},

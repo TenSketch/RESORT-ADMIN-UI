@@ -1,1 +1,34 @@
-<p>showguest works!</p>
+<!-- show-guest.component.html -->
+<section class="guest-list">
+  <h2>Guest List</h2>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Profile Image</th>
+          <th>Nationality</th>
+          <th>Address</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let guest of guests" class="guest-item">
+          <td>{{ guest.fullname }}</td>
+          <td>{{ guest.phone }}</td>
+          <td>{{ guest.email }}</td>
+          <td><img [src]="guest.profileImage" alt="Profile Image" height="50"></td>
+          <td>{{ guest.nationality }}</td>
+          <td>{{ guest.addressLine1 }},  {{ guest.city }}, {{ guest.state }}</td>
+          <td>
+            <button (click)="updateGuest(guest.id)" class="btn btn-info">Update</button>
+            <button (click)="deleteGuest(guest.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            <button class="btn btn-primary view-details" (click)="guestdeatails(guest.id)" style="margin-left: 10px;">View Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

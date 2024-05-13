@@ -64,6 +64,8 @@ export class MainLayoutComponent implements OnInit {
 
   goToViewGuests() {
     console.log("View guests page");
+    this.router.navigate(["./viewguest"])
+
     // Add your logic to navigate to the view guests page
   }
 

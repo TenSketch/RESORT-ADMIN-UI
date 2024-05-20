@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularEditorModule } from '@kolkov/angular-editor'; // Import AngularEditorModule
+
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -20,6 +22,11 @@ import { ResortsComponent } from './resorts/resorts.component';
 import { RoomComponent } from './room/room.component';
 import { UpdateGuestComponent } from './update-guest/update-guest.component';
 import { ViewguestComponent } from './viewguest/viewguest.component';
+import { ViewcottageComponent } from './viewcottage/viewcottage.component';
+import { AddcottageComponent } from './addcottage/addcottage.component';
+import { ViewroomComponent } from './viewroom/viewroom.component';
+import { ViewresortsComponent } from './viewresorts/viewresorts.component';
+import { ViewreservationComponent } from './viewreservation/viewreservation.component';
 
 
 @NgModule({
@@ -36,6 +43,11 @@ import { ViewguestComponent } from './viewguest/viewguest.component';
     RoomComponent,
     UpdateGuestComponent,
     ViewguestComponent,
+    ViewcottageComponent,
+    AddcottageComponent,
+    ViewroomComponent,
+    ViewresortsComponent,
+    ViewreservationComponent,
 
   ],
   imports: [
@@ -47,6 +59,8 @@ import { ViewguestComponent } from './viewguest/viewguest.component';
     AppRoutingModule,
     RouterModule,
     SharedModule,
+    AngularEditorModule
+
 
   ],
   exports: [SharedModule],

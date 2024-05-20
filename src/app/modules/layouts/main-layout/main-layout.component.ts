@@ -33,6 +33,8 @@ export class MainLayoutComponent implements OnInit {
   }
   goToViewResorts() {
     // this.router.navigate(['/customer-records']);
+    this.router.navigate(['/viewresorts']);
+
     console.log("add view page")
 
   }
@@ -43,16 +45,21 @@ export class MainLayoutComponent implements OnInit {
 
   goToViewCottages() {
     console.log("View cottages page");
+    this.router.navigate(["./viewcottage"])
+
     // Add your logic to navigate to the view cottages page
   }
 
   goToAddCottage() {
     console.log("Add cottage page");
+    this.router.navigate(["./addcottage"])
     // Add your logic to navigate to the add cottage page
   }
 
   goToViewRooms() {
     console.log("View rooms page");
+    this.router.navigate(['/viewroom']);
+
     // Add your logic to navigate to the view rooms page
   }
 
@@ -86,6 +93,8 @@ this.router.navigate(["./addguest"])
 
   goToViewReservations() {
     console.log("View reservations page");
+    this.router.navigate(['/viewreservations']);
+
     // Add your logic to navigate to the view reservations page
   }
   goToCallerDetails() {

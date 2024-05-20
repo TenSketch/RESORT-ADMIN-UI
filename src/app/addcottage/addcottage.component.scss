@@ -1,0 +1,55 @@
+/* styles.css or your component's style file */
+
+/* Container */
+.container {
+    text-align: center;
+  }
+  
+  /* Form Container */
+  .formcontainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Inputs and Selects */
+  input[type="text"],
+  select {
+    width: calc(100% - 12px);
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Angular Editor */
+  .custom-editor .angular-editor-wrapper {
+    font-size: 16px; /* Increase editor text size */
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  

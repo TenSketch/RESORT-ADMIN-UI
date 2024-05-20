@@ -1,0 +1,21 @@
+<!-- viewrooms.component.html -->
+<div class="container">
+    <h2>View Rooms</h2>
+    <div *ngIf="rooms.length === 0">No rooms available.</div>
+    <div *ngIf="rooms.length > 0">
+      <div *ngFor="let room of rooms" class="room-card">
+        <h3>{{ room.roomName }}</h3>
+        <img [src]="room.roomImage" alt="{{ room.roomName }}" />
+        <p><strong>Room ID:</strong> {{ room.roomId }}</p>
+        <p><strong>Resort Type:</strong> {{ room.resortType }}</p>
+        <p><strong>Cottage Type:</strong> {{ room.cottageType }}</p>
+        <p><strong>Week Days Rate:</strong> {{ room.weekDaysRate }}</p>
+        <p><strong>Week End Rate:</strong> {{ room.weekEndRate }}</p>
+        <p><strong>Number of Guests:</strong> {{ room.noOfGuest }}</p>
+        <p><strong>Extra Guest:</strong> {{ room.extraGuest }}</p>
+        <p><strong>Charges per Bed (Weekdays):</strong> {{ room.chargesPerBedWeekdays }}</p>
+        <p><strong>Charges per Bed (Weekend):</strong> {{ room.chargesPerBedWeekend }}</p>
+      </div>
+    </div>
+  </div>
+  

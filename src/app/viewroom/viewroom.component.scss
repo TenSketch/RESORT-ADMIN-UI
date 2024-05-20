@@ -1,0 +1,29 @@
+/* viewrooms.component.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .room-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .room-card h3 {
+    margin-top: 0;
+  }
+  
+  .room-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 16px;
+  }
+  
+  .room-card p {
+    margin: 4px 0;
+  }
+  

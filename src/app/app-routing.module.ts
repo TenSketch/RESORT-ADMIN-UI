@@ -9,6 +9,11 @@ import { ResortsComponent } from './resorts/resorts.component';
 import { ShowguestComponent } from './showguest/showguest.component';
 import { UpdateGuestComponent } from './update-guest/update-guest.component';
 import { ViewguestComponent } from './viewguest/viewguest.component';
+import { AddcottageComponent } from './addcottage/addcottage.component';
+import { ViewcottageComponent } from './viewcottage/viewcottage.component';
+import { ViewroomComponent } from './viewroom/viewroom.component';
+import { ViewresortsComponent } from './viewresorts/viewresorts.component';
+import { ViewreservationComponent } from './viewreservation/viewreservation.component';
 
 
 const routes: Routes = [
@@ -21,6 +26,11 @@ const routes: Routes = [
 {path:'addroom',component:RoomComponent},
 {path:'addreservation',component:ReservationComponent},
 {path:'addresorts',component:ResortsComponent},
+{path:'addcottage',component:AddcottageComponent},
+{path:'viewcottage',component:ViewcottageComponent},
+{path:'viewroom',component:ViewroomComponent},
+{path:'viewresorts',component:ViewresortsComponent},
+{path:'viewreservations',component:ViewreservationComponent},
 
 
  {path:'',redirectTo:'login',pathMatch:'full'}
